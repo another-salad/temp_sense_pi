@@ -6,9 +6,11 @@ yes I put flask in front of everything....
 ## -Adafruit PCT2075 temperature sensor (i2c)
 ## - Raspberry pi
 
-#### GPIO pins:  
-SDA: pin 3  
-SDC: pin 5
+### GPIO pins:  
+#### SDA: pin 3  
+#### SDC: pin 5
+#### VCC: pin 17
+#### GND: 9
 -------------
 
 #### Setup  
