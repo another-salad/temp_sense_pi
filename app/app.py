@@ -20,6 +20,7 @@ def temp() -> str:
         str: JSON string {"temp": float, "error": bool, "loc": str}
     """
     error = False
+    http_status_code = 200
     try:
 
         return_val = sensor.temperature
@@ -30,9 +31,10 @@ def temp() -> str:
 
         error = True
         return_val = 0
+        http_status_code = 500
 
-    return jsonify({"temp": return_val, "error": error, "loc": LOCATION})
+    return jsonify({"temp": return_val, "error": error, "loc": LOCATION}), http_status_code
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=82, debug=debug)
+    app.run(host="0.0.0.0", port=8080, debug=debug)
