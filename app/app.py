@@ -8,7 +8,7 @@ LOCATION = "server_room"
 sensor = sensor()  # Temp sensor
 
 # Flask
-app = Flask(__name__, static_url_path="")
+app = Flask(__name__)
 debug = False
 
 
@@ -35,4 +35,4 @@ def temp() -> str:
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=80, debug=debug)
+    app.run(host="0.0.0.0", port=82, debug=debug)
