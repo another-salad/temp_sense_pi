@@ -31,7 +31,7 @@ def temp() -> str:
 
         error = True
         return_val = 0
-        http_status_code = 500
+        http_status_code = 404
 
     return jsonify({"temp": return_val, "error": error, "loc": LOCATION}), http_status_code
 
