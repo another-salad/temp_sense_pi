@@ -13,6 +13,7 @@ debug = False
 
 
 @app.route("/", methods=["GET"])
+@app.route("/get_temp", methods=["GET"])
 def temp() -> str:
     """Returns the temp (Centigrade) from the gpio temp sensor
 
@@ -31,7 +32,7 @@ def temp() -> str:
 
         error = True
         return_val = 0
-        http_status_code = 404
+        http_status_code = 500
 
     return jsonify({"temp": return_val, "error": error, "loc": LOCATION}), http_status_code
 
